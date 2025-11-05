@@ -4,6 +4,8 @@ use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\RoleController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -31,4 +33,11 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::put("/usuario/{id}", [UsuarioController::class, "funModificar"]);
     Route::delete("/usuario/{id}", [UsuarioController::class, "funEliminar"]);
 
+    // CRUDs
+    Route::apiResource("categoria", CategoriaController::class); 
+    Route::apiResource("role", RoleController::class);   
 });
+
+Route::get("/no-autorizado", function(){
+    return response()->json(["mensaje" => "No estas autorizado para ver esta información"], 401);
+})->name("login");

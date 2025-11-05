@@ -1,0 +1,15 @@
+GET http://127.0.0.1:8000/api/role
+Authorization: Bearer 2|VXSADFxQIIuegwycOZ0tW8BM1Jn5O3TLmHS0LNzt070444f9
+Content-Type: application/json
+Accept: application/json
+
+### guardar
+POST http://127.0.0.1:8000/api/role
+Authorization: Bearer 2|VXSADFxQIIuegwycOZ0tW8BM1Jn5O3TLmHS0LNzt070444f9
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "gerente",
+    "detalle": "gerente"
+}
