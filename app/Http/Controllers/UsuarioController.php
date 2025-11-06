@@ -9,7 +9,7 @@ class UsuarioController extends Controller
 {
     public function funListar(){
         try {
-            $usuarios = User::get();
+            $usuarios = User::with(['persona', 'roles'])->get();
             return response()->json($usuarios, 200);
 
         } catch (\Exception $e) {
