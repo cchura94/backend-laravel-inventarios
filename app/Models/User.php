@@ -50,4 +50,8 @@ class User extends Authenticatable
     public function persona(){
         return $this->hasOne(Persona::class);
     }
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }
