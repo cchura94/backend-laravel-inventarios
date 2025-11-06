@@ -1,5 +1,5 @@
 GET http://127.0.0.1:8000/api/categoria
-Authorization: Bearer 1|fdqqoZQaAfpOTU8wyvlAAgHpJCFtNztUxpfjNTftf83ad898
+Authorization: Bearer 3|oZ12GfwRTQkPRBvh1EHh66uHeoCfPum7I9j4F63T791f18aa
 
 ### Guardar
 POST http://127.0.0.1:8000/api/categoria
