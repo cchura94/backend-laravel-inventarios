@@ -1,6 +1,6 @@
 GET http://127.0.0.1:8000/api/usuario
 Accept: application/json
-Authorization: Bearer 4|C0spzLWLbordPjXMleo0tCEdAL4wQy6Mx0cYpPeC93c148a0
+Authorization: Bearer 5|JWdEIaw3IwTKGG3IvHgQHXJ1cf6gQ2c3ZpP6UHsJ23769311
 
 ### Guardar Usaurio
 POST http://127.0.0.1:8000/api/usuario

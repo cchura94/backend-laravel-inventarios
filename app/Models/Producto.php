@@ -9,4 +9,9 @@ class Producto extends Model
     public function categoria(){
         return $this->belongsTo(Categoria::class);
     }
+
+    public function almacenes(){
+        return $this->belongsToMany(Almacen::class)
+                    ->withPivot(["cantidad_actual","fecha_actualizacion"]);
+    }
 }

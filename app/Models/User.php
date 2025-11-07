@@ -54,4 +54,12 @@ class User extends Authenticatable
     public function roles(){
         return $this->belongsToMany(Role::class);
     }
+
+    public function sucursales(){
+        return $this->belongsToMany(Sucursal::class, "sucursal_usuario", "usuario_id", "sucursal_id");
+    }
+
+    public function notas(){
+        return $this->hasMany(Nota::class);
+    }
 }
