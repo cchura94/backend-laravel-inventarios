@@ -1,0 +1,20 @@
+### Lista de productos con paginación
+GET http://127.0.0.1:8000/api/producto?limit=10&search=TEC
+Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Accept: application/json
+
+### Guardar Producto
+POST http://127.0.0.1:8000/api/producto
+Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nombre": "MONITOR",
+    "descripcion": "MONITOR gammer",
+    "unidad_medida": "CAJA",
+    "marca": "ASUS",
+    "precio_venta": 3999.50,
+    "estado": true,
+    "categoria_id": 1
+}

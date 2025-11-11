@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\AlmacenController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SucursalController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -35,7 +38,11 @@ Route::middleware('auth:sanctum')->group(function(){
 
     // CRUDs
     Route::apiResource("categoria", CategoriaController::class); 
-    Route::apiResource("role", RoleController::class);   
+    Route::apiResource("role", RoleController::class);
+    
+    Route::apiResource("sucursal", SucursalController::class);
+    Route::apiResource("almacen", AlmacenController::class);
+    Route::apiResource("producto", ProductoController::class);
 });
 
 Route::get("/no-autorizado", function(){

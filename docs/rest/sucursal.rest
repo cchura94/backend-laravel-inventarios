@@ -1,0 +1,15 @@
+### Listar
+GET http://127.0.0.1:8000/api/sucursal
+Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+
+### Guardar
+POST http://127.0.0.1:8000/api/sucursal
+Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Content-Type: application/json
+
+{
+    "nombre": "Sucursal 2",
+    "direccion": "Av. 10 de Noviembre Z. CBA",
+    "telefono": "876453",
+    "ciudad": "La Paz"
+}
