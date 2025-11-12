@@ -68,7 +68,9 @@ class ProductoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $producto = Producto::find($id);
+
+        return response()->json($producto);
     }
 
     /**
@@ -76,7 +78,22 @@ class ProductoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            "nombre" => "required"
+        ]);
+
+        $producto = Producto::find($id);
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->unidad_medida = $request->unidad_medida;
+        $producto->marca = $request->marca;
+        $producto->precio_venta = $request->precio_venta;
+        $producto->imagen = $request->imagen;
+        $producto->estado = $request->estado;
+        $producto->categoria_id = $request->categoria_id;
+        $producto->update();
+
+        return response()->json(["mensaje" => "Producto actualizado" ]);
     }
 
     /**
@@ -85,5 +102,18 @@ class ProductoController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function actualizarImagen(string $id, Request $request){
+        if($file = $request->file("imagen")){
+            $direccion_url = time() . "-" .$file->getClientOriginalName();
+            $file->move("imagenes", $direccion_url);
+
+            $producto = Producto::find($id);
+            $producto->imagen = "imagenes/". $direccion_url;
+            $producto->update();
+
+            return response()->json();
+        }
     }
 }

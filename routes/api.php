@@ -29,6 +29,10 @@ Route::prefix('/v1/auth')->group(function(){
 });
 
 Route::middleware('auth:sanctum')->group(function(){
+
+    // subida de imagen de producto
+    Route::post("/producto/{id}/subir-imagen", [ProductoController::class, "actualizarImagen"]);
+
     // CRUD Usuarios
     Route::get("/usuario", [UsuarioController::class, "funListar"]);
     Route::post("/usuario", [UsuarioController::class, "funGuardar"]);
