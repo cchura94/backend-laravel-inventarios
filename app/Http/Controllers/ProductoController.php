@@ -101,7 +101,11 @@ class ProductoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $producto = Producto::find($id);
+        $producto->estado = false;
+        $producto->update();
+        return response()->json(["mensaje" => "Producto inactivado" ]);
+   
     }
 
     public function actualizarImagen(string $id, Request $request){

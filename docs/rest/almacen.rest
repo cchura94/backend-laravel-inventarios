@@ -1,6 +1,6 @@
 ### Listar
 GET http://127.0.0.1:8000/api/almacen
-Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Authorization: Bearer 9|L8DMl3YmLN9OX30NXXyBORz5q0QwKrq0EKLQVaAC329e7b34
 
 ### Guardar
 POST http://127.0.0.1:8000/api/almacen
@@ -14,4 +14,9 @@ Accept: application/json
     "descripcion": "Prueba",
     "sucursal_id": 1
 }
+
+### mostrar un almacen
+GET http://127.0.0.1:8000/api/almacen/1
+Authorization: Bearer 9|L8DMl3YmLN9OX30NXXyBORz5q0QwKrq0EKLQVaAC329e7b34
+
 

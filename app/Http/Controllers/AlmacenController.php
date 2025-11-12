@@ -42,7 +42,7 @@ class AlmacenController extends Controller
      */
     public function show(string $id)
     {
-        $almacen = Almacen:: find($id);
+        $almacen = Almacen::with(["sucursal", "productos"])->find($id);
 
         return response()->json($almacen, 200);
     }
