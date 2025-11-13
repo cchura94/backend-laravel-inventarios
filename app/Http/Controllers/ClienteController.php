@@ -23,17 +23,19 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "nombre" => "required",
+            "tipo" => "required"
         ]);
-
+        
         $cliente = new Cliente();
-        $cliente->nombre = $request->nombre;
+        $cliente->tipo = $request->tipo;
+        $cliente->razon_social = $request->razon_social;
         $cliente->direccion = $request->direccion;
         $cliente->telefono = $request->telefono;
-        $cliente->ciudad = $request->ciudad;
+        $cliente->nro_identificacion = $request->nro_identificacion;
         $cliente->save();
         
         return response()->json($cliente);
+        
     }
 
     /**
@@ -41,7 +43,9 @@ class ClienteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $cliente = Cliente::find($id);
+
+        return  response()->json($cliente, 200);
     }
 
     /**

@@ -1,16 +1,17 @@
 GET http://127.0.0.1:8000/api/usuario
 Accept: application/json
-Authorization: Bearer 5|JWdEIaw3IwTKGG3IvHgQHXJ1cf6gQ2c3ZpP6UHsJ23769311
+Authorization: Bearer 10|P4PMz9CN5lkghm0CFfspcNMuAMfbz1BN6AnCrona19868a5f
 
 ### Guardar Usaurio
 POST http://127.0.0.1:8000/api/usuario
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer 10|P4PMz9CN5lkghm0CFfspcNMuAMfbz1BN6AnCrona19868a5f
 
 {
-    "name": "carlos",
-    "email": "carlos@mail.com",
-    "password": "carlos54321"
+    "name": "admin",
+    "email": "admin@mail.com",
+    "password": "admin54321"
 }
 
 ### Mostrar
