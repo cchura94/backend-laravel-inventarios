@@ -1,20 +1,20 @@
 GET http://127.0.0.1:8000/api/cliente
 Accept: application/json
-Authorization: Bearer 10|P4PMz9CN5lkghm0CFfspcNMuAMfbz1BN6AnCrona19868a5f
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 
 ### Guardar
 POST http://127.0.0.1:8000/api/cliente
-Authorization: Bearer 10|P4PMz9CN5lkghm0CFfspcNMuAMfbz1BN6AnCrona19868a5f
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 Content-Type: application/json
 Accept: application/json
 
 {
-    "tipo": "cliente",
-    "razon_social": "Pablo S.",
-    "nro_identificacion": "6865465",
-    "telefono": "2355655",
-    "direccion": "Av. 123 Zona ABC",
-    "correo": "pablo@mail.com",
+    "tipo": "proveedor",
+    "razon_social": "Partner Asus. SRL",
+    "nro_identificacion": "98798465",
+    "telefono": "231654",
+    "direccion": "Av. Central Zona CBA",
+    "correo": "admin@partner.com",
     "estado": true
 
 }

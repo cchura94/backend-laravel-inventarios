@@ -1,6 +1,6 @@
 ### Lista de productos con paginación
-GET http://127.0.0.1:8000/api/producto?page=1&limit=2&search=MON
-Authorization: Bearer 7|WQHzuSXuRXG25QvkqzMjOecW7Ezyd7ttRNW3iPgI9ff418c6
+GET http://127.0.0.1:8000/api/producto?page=1&limit=5&search=
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 Accept: application/json
 
 ### Guardar Producto

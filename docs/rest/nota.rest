@@ -1,15 +1,35 @@
 GET http://127.0.0.1:8000/api/nota
-Authorization: Bearer 10|P4PMz9CN5lkghm0CFfspcNMuAMfbz1BN6AnCrona19868a5f
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 
-### Crear Nota
+### Crear Nota Compra
 POST http://127.0.0.1:8000/api/nota
 Accept: application/json
-Authorization: Bearer 11|PMzs34XUfEBS5HtgeEbBiOTIeaY6owdCekMFWrRb95048429
 Content-Type: application/json
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 
 {
-    "fecha": "2025-11-12",
     "tipo_nota": "compra",
+    "impuestos": "0",
+    "descuentos": "0",
+    "total_calculado": "0",
+    "estado_nota": "NINGUNA",
+    "observaciones": "NINGUNA",
+    "cliente_id": 2,
+    "movimientos": [
+        { "producto_id": 2, "almacen_id": 1, "cantidad": 5, "tipo_movimiento": "ingreso", "precio_unitario_compra": 1200, "precio_unitario_venta": 1300, "observaciones": "NINGUNA" },
+        { "producto_id": 3, "almacen_id": 1, "cantidad": 10, "tipo_movimiento": "ingreso", "precio_unitario_compra": 3599, "precio_unitario_venta": 3500, "observaciones": "NINGUNA" }
+    ]
+}
+
+
+### Crear Nota Venta
+POST http://127.0.0.1:8000/api/nota
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
+
+{
+    "tipo_nota": "venta",
     "impuestos": "0",
     "descuentos": "0",
     "total_calculado": "0",
@@ -17,12 +37,16 @@ Content-Type: application/json
     "observaciones": "NINGUNA",
     "cliente_id": 1,
     "movimientos": [
-        { "producto_id": 2, "almacen_id": 1, "cantidad": 5, "tipo_movimiento": "ingreso", "precio_unitario_compra": 1200, "precio_unitario_venta": 1300, "observaciones": "NINGUNA" }
-        { "producto_id": 3, "almacen_id": 1, "cantidad": 10, "tipo_movimiento": "ingreso", "precio_unitario_compra": 3599, "precio_unitario_venta": 3500, "observaciones": "NINGUNA" }
+        { "producto_id": 2, "almacen_id": 1, "cantidad": 5, "tipo_movimiento": "salida", "precio_unitario_compra": 1200, "precio_unitario_venta": 1300, "observaciones": "NINGUNA" },
+        { "producto_id": 3, "almacen_id": 1, "cantidad": 5, "tipo_movimiento": "salida", "precio_unitario_compra": 3599, "precio_unitario_venta": 3500, "observaciones": "NINGUNA" }
     ]
 }
 
 
+### REPORTE PDF
+
+GET http://127.0.0.1:8000/api/nota/reportespdf
+Authorization: Bearer 13|ioJlhwIMkGJlIGxWGM2UBtQItz3hPDPNJchjZfeT93718c52
 
 
 

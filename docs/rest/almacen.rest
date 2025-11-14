@@ -1,6 +1,6 @@
 ### Listar
 GET http://127.0.0.1:8000/api/almacen
-Authorization: Bearer 9|L8DMl3YmLN9OX30NXXyBORz5q0QwKrq0EKLQVaAC329e7b34
+Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
 
 ### Guardar
 POST http://127.0.0.1:8000/api/almacen
