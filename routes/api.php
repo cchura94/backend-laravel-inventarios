@@ -32,6 +32,8 @@ Route::prefix('/v1/auth')->group(function(){
 
 Route::middleware('auth:sanctum')->group(function(){
     
+    // reporte excel
+    Route::get('producto/export-excel', [ProductoController::class, 'exportarProductosPDF']);
     // reporte PDF
     Route::get("/nota/reportespdf", [NotaController::class, "funReportePDF"]);
     // subida de imagen de producto
