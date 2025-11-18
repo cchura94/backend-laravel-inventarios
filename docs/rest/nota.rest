@@ -1,11 +1,11 @@
 GET http://127.0.0.1:8000/api/nota
-Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 
 ### Crear Nota Compra
 POST http://127.0.0.1:8000/api/nota
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 
 {
     "tipo_nota": "compra",
@@ -16,8 +16,8 @@ Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
     "observaciones": "NINGUNA",
     "cliente_id": 2,
     "movimientos": [
-        { "producto_id": 2, "almacen_id": 1, "cantidad": 5, "tipo_movimiento": "ingreso", "precio_unitario_compra": 1200, "precio_unitario_venta": 1300, "observaciones": "NINGUNA" },
-        { "producto_id": 3, "almacen_id": 1, "cantidad": 10, "tipo_movimiento": "ingreso", "precio_unitario_compra": 3599, "precio_unitario_venta": 3500, "observaciones": "NINGUNA" }
+        { "producto_id": 4, "almacen_id": 2, "cantidad": 5, "tipo_movimiento": "ingreso", "precio_unitario_compra": 1200, "precio_unitario_venta": 1300, "observaciones": "NINGUNA" },
+        { "producto_id": 3, "almacen_id": 2, "cantidad": 10, "tipo_movimiento": "ingreso", "precio_unitario_compra": 3599, "precio_unitario_venta": 3500, "observaciones": "NINGUNA" }
     ]
 }
 

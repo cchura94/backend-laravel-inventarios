@@ -30,10 +30,10 @@ Route::prefix('/v1/auth')->group(function(){
     });
 });
 
-Route::get("/nota/reportespdf", [NotaController::class, "funReportePDF"]);
 Route::middleware('auth:sanctum')->group(function(){
-
+    
     // reporte PDF
+    Route::get("/nota/reportespdf", [NotaController::class, "funReportePDF"]);
     // subida de imagen de producto
     Route::post("/producto/{id}/subir-imagen", [ProductoController::class, "actualizarImagen"]);
 

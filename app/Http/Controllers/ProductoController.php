@@ -28,12 +28,12 @@ class ProductoController extends Controller
                                     ->orWhere("marca", "iLike", "%$search%");
         }
         if(isset($almacenID)){
-            $productos = $productos->whereHas("almacenes", function ($query) use ($almacenID){
-                $query->where('almacenes.id', "=", $almacenID);
+            $productos = $productos->whereHas("almacens", function ($query) use ($almacenID){
+                $query->where('almacens.id', "=", $almacenID);
             });
         }
 
-        $productos = $productos->with(['categoria', 'almacenes'])
+        $productos = $productos->with(['categoria', 'almacens'])
                                 ->orderBy('id', 'desc')
                                 ->paginate($limit);
         return response()->json($productos);

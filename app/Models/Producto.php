@@ -10,8 +10,9 @@ class Producto extends Model
         return $this->belongsTo(Categoria::class);
     }
 
-    public function almacenes(){
-        return $this->belongsToMany(Almacen::class)
+    public function almacens(){
+        return $this->belongsToMany(Almacen::class, "almacen_producto", "producto_id", "almacen_id")
+                    ->withTimestamps()
                     ->withPivot(["cantidad_actual","fecha_actualizacion"]);
     }
 }

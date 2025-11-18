@@ -1,10 +1,10 @@
 ### Listar
 GET http://127.0.0.1:8000/api/sucursal
-Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 
 ### Guardar
 POST http://127.0.0.1:8000/api/sucursal
-Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 Content-Type: application/json
 
 {

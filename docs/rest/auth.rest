@@ -3,8 +3,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "email": "maria@mail.com",
-    "password": "maria54321"
+    "email": "admin@mail.com",
+    "password": "admin54321"
 }
 
 ### Registro de usuario

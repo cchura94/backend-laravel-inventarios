@@ -17,7 +17,7 @@ class NotaController extends Controller
     public function index(Request $request)
     {
         //
-        $query = Nota::with(['user', 'cliente']);
+        $query = Nota::with(['user', 'cliente', 'movimientos']);
 
         // filtros
         if ($request->has("tipo_nota")) {

@@ -10,10 +10,12 @@ class AlmacenController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $almacenes = Almacen::get();
-
+        $sucursalID = isset($request->sucursal)?$request->sucursal:null;
+      
+        $almacenes = Almacen::where("sucursal_id", $sucursalID)->with('sucursal')->get();
+        
         return response()->json($almacenes, 200);
     }
 

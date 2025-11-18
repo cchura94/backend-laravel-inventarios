@@ -1,18 +1,18 @@
 ### Listar
-GET http://127.0.0.1:8000/api/almacen
-Authorization: Bearer 12|Yc3aoQ1xE0nvi3WdJH6qrbQxLUCuEaWj2ATuxBbKcdf7a885
+GET http://127.0.0.1:8000/api/almacen?sucursal=1
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 
 ### Guardar
 POST http://127.0.0.1:8000/api/almacen
-Authorization: Bearer 6|H2F3SYCcgiP7By6VRjqCiABa5xiXLx28YjsRYb1w458fdbcc
+Authorization: Bearer 14|zB3loITAdvjMaopRyRE3nryIylmKv90bUasgOrM2a25f615a
 Content-Type: application/json
 Accept: application/json
 
 {
-    "nombre": "ALMACEN 1",
-    "codigo": "ALM-001",
-    "descripcion": "Prueba",
-    "sucursal_id": 1
+    "nombre": "CASA MATRIZ",
+    "codigo": "ALM-003",
+    "descripcion": "Pr Alm",
+    "sucursal_id": 2
 }
 
 ### mostrar un almacen
